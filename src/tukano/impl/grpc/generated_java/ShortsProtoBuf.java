@@ -12713,8 +12713,8 @@ public final class ShortsProtoBuf {
 
   }
 
-  public interface RemoveLikesOfUserArgsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:RemoveLikesOfUserArgs)
+  public interface DeleteAllShortsArgsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:DeleteAllShortsArgs)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -12740,29 +12740,42 @@ public final class ShortsProtoBuf {
      */
     com.google.protobuf.ByteString
         getPasswordBytes();
+
+    /**
+     * <code>string token = 3;</code>
+     * @return The token.
+     */
+    java.lang.String getToken();
+    /**
+     * <code>string token = 3;</code>
+     * @return The bytes for token.
+     */
+    com.google.protobuf.ByteString
+        getTokenBytes();
   }
   /**
-   * Protobuf type {@code RemoveLikesOfUserArgs}
+   * Protobuf type {@code DeleteAllShortsArgs}
    */
-  public static final class RemoveLikesOfUserArgs extends
+  public static final class DeleteAllShortsArgs extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:RemoveLikesOfUserArgs)
-      RemoveLikesOfUserArgsOrBuilder {
+      // @@protoc_insertion_point(message_implements:DeleteAllShortsArgs)
+      DeleteAllShortsArgsOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use RemoveLikesOfUserArgs.newBuilder() to construct.
-    private RemoveLikesOfUserArgs(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use DeleteAllShortsArgs.newBuilder() to construct.
+    private DeleteAllShortsArgs(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private RemoveLikesOfUserArgs() {
+    private DeleteAllShortsArgs() {
       userId_ = "";
       password_ = "";
+      token_ = "";
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new RemoveLikesOfUserArgs();
+      return new DeleteAllShortsArgs();
     }
 
     @java.lang.Override
@@ -12770,7 +12783,7 @@ public final class ShortsProtoBuf {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private RemoveLikesOfUserArgs(
+    private DeleteAllShortsArgs(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -12800,6 +12813,12 @@ public final class ShortsProtoBuf {
               password_ = s;
               break;
             }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              token_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -12823,15 +12842,15 @@ public final class ShortsProtoBuf {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return tukano.impl.grpc.generated_java.ShortsProtoBuf.internal_static_RemoveLikesOfUserArgs_descriptor;
+      return tukano.impl.grpc.generated_java.ShortsProtoBuf.internal_static_DeleteAllShortsArgs_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return tukano.impl.grpc.generated_java.ShortsProtoBuf.internal_static_RemoveLikesOfUserArgs_fieldAccessorTable
+      return tukano.impl.grpc.generated_java.ShortsProtoBuf.internal_static_DeleteAllShortsArgs_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs.class, tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs.Builder.class);
+              tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs.class, tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs.Builder.class);
     }
 
     public static final int USERID_FIELD_NUMBER = 1;
@@ -12910,6 +12929,44 @@ public final class ShortsProtoBuf {
       }
     }
 
+    public static final int TOKEN_FIELD_NUMBER = 3;
+    private volatile java.lang.Object token_;
+    /**
+     * <code>string token = 3;</code>
+     * @return The token.
+     */
+    @java.lang.Override
+    public java.lang.String getToken() {
+      java.lang.Object ref = token_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        token_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string token = 3;</code>
+     * @return The bytes for token.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTokenBytes() {
+      java.lang.Object ref = token_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        token_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -12930,6 +12987,9 @@ public final class ShortsProtoBuf {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, password_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, token_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -12945,6 +13005,9 @@ public final class ShortsProtoBuf {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, password_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, token_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -12955,15 +13018,17 @@ public final class ShortsProtoBuf {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs)) {
+      if (!(obj instanceof tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs)) {
         return super.equals(obj);
       }
-      tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs other = (tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs) obj;
+      tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs other = (tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs) obj;
 
       if (!getUserId()
           .equals(other.getUserId())) return false;
       if (!getPassword()
           .equals(other.getPassword())) return false;
+      if (!getToken()
+          .equals(other.getToken())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -12979,74 +13044,76 @@ public final class ShortsProtoBuf {
       hash = (53 * hash) + getUserId().hashCode();
       hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
       hash = (53 * hash) + getPassword().hashCode();
+      hash = (37 * hash) + TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getToken().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs parseFrom(
+    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs parseFrom(
+    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs parseFrom(
+    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs parseFrom(
+    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs parseFrom(byte[] data)
+    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs parseFrom(
+    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs parseFrom(java.io.InputStream input)
+    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs parseFrom(
+    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs parseDelimitedFrom(java.io.InputStream input)
+    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs parseDelimitedFrom(
+    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs parseFrom(
+    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs parseFrom(
+    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -13059,7 +13126,7 @@ public final class ShortsProtoBuf {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs prototype) {
+    public static Builder newBuilder(tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -13075,26 +13142,26 @@ public final class ShortsProtoBuf {
       return builder;
     }
     /**
-     * Protobuf type {@code RemoveLikesOfUserArgs}
+     * Protobuf type {@code DeleteAllShortsArgs}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:RemoveLikesOfUserArgs)
-        tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgsOrBuilder {
+        // @@protoc_insertion_point(builder_implements:DeleteAllShortsArgs)
+        tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return tukano.impl.grpc.generated_java.ShortsProtoBuf.internal_static_RemoveLikesOfUserArgs_descriptor;
+        return tukano.impl.grpc.generated_java.ShortsProtoBuf.internal_static_DeleteAllShortsArgs_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return tukano.impl.grpc.generated_java.ShortsProtoBuf.internal_static_RemoveLikesOfUserArgs_fieldAccessorTable
+        return tukano.impl.grpc.generated_java.ShortsProtoBuf.internal_static_DeleteAllShortsArgs_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs.class, tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs.Builder.class);
+                tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs.class, tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs.Builder.class);
       }
 
-      // Construct using tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs.newBuilder()
+      // Construct using tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -13116,23 +13183,25 @@ public final class ShortsProtoBuf {
 
         password_ = "";
 
+        token_ = "";
+
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return tukano.impl.grpc.generated_java.ShortsProtoBuf.internal_static_RemoveLikesOfUserArgs_descriptor;
+        return tukano.impl.grpc.generated_java.ShortsProtoBuf.internal_static_DeleteAllShortsArgs_descriptor;
       }
 
       @java.lang.Override
-      public tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs getDefaultInstanceForType() {
-        return tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs.getDefaultInstance();
+      public tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs getDefaultInstanceForType() {
+        return tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs.getDefaultInstance();
       }
 
       @java.lang.Override
-      public tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs build() {
-        tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs result = buildPartial();
+      public tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs build() {
+        tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -13140,10 +13209,11 @@ public final class ShortsProtoBuf {
       }
 
       @java.lang.Override
-      public tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs buildPartial() {
-        tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs result = new tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs(this);
+      public tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs buildPartial() {
+        tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs result = new tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs(this);
         result.userId_ = userId_;
         result.password_ = password_;
+        result.token_ = token_;
         onBuilt();
         return result;
       }
@@ -13182,22 +13252,26 @@ public final class ShortsProtoBuf {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs) {
-          return mergeFrom((tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs)other);
+        if (other instanceof tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs) {
+          return mergeFrom((tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs other) {
-        if (other == tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs.getDefaultInstance()) return this;
+      public Builder mergeFrom(tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs other) {
+        if (other == tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs.getDefaultInstance()) return this;
         if (!other.getUserId().isEmpty()) {
           userId_ = other.userId_;
           onChanged();
         }
         if (!other.getPassword().isEmpty()) {
           password_ = other.password_;
+          onChanged();
+        }
+        if (!other.getToken().isEmpty()) {
+          token_ = other.token_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -13215,11 +13289,11 @@ public final class ShortsProtoBuf {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs parsedMessage = null;
+        tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs) e.getUnfinishedMessage();
+          parsedMessage = (tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -13380,6 +13454,82 @@ public final class ShortsProtoBuf {
         onChanged();
         return this;
       }
+
+      private java.lang.Object token_ = "";
+      /**
+       * <code>string token = 3;</code>
+       * @return The token.
+       */
+      public java.lang.String getToken() {
+        java.lang.Object ref = token_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          token_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string token = 3;</code>
+       * @return The bytes for token.
+       */
+      public com.google.protobuf.ByteString
+          getTokenBytes() {
+        java.lang.Object ref = token_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          token_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string token = 3;</code>
+       * @param value The token to set.
+       * @return This builder for chaining.
+       */
+      public Builder setToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        token_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string token = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearToken() {
+        
+        token_ = getDefaultInstance().getToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string token = 3;</code>
+       * @param value The bytes for token to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        token_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -13393,83 +13543,70 @@ public final class ShortsProtoBuf {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:RemoveLikesOfUserArgs)
+      // @@protoc_insertion_point(builder_scope:DeleteAllShortsArgs)
     }
 
-    // @@protoc_insertion_point(class_scope:RemoveLikesOfUserArgs)
-    private static final tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:DeleteAllShortsArgs)
+    private static final tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs();
+      DEFAULT_INSTANCE = new tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs();
     }
 
-    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs getDefaultInstance() {
+    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<RemoveLikesOfUserArgs>
-        PARSER = new com.google.protobuf.AbstractParser<RemoveLikesOfUserArgs>() {
+    private static final com.google.protobuf.Parser<DeleteAllShortsArgs>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteAllShortsArgs>() {
       @java.lang.Override
-      public RemoveLikesOfUserArgs parsePartialFrom(
+      public DeleteAllShortsArgs parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new RemoveLikesOfUserArgs(input, extensionRegistry);
+        return new DeleteAllShortsArgs(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<RemoveLikesOfUserArgs> parser() {
+    public static com.google.protobuf.Parser<DeleteAllShortsArgs> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<RemoveLikesOfUserArgs> getParserForType() {
+    public com.google.protobuf.Parser<DeleteAllShortsArgs> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs getDefaultInstanceForType() {
+    public tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface RemoveLikesOfUserResultOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:RemoveLikesOfUserResult)
+  public interface DeleteAllShortsResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:DeleteAllShortsResult)
       com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string userId = 1;</code>
-     * @return The userId.
-     */
-    java.lang.String getUserId();
-    /**
-     * <code>string userId = 1;</code>
-     * @return The bytes for userId.
-     */
-    com.google.protobuf.ByteString
-        getUserIdBytes();
   }
   /**
-   * Protobuf type {@code RemoveLikesOfUserResult}
+   * Protobuf type {@code DeleteAllShortsResult}
    */
-  public static final class RemoveLikesOfUserResult extends
+  public static final class DeleteAllShortsResult extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:RemoveLikesOfUserResult)
-      RemoveLikesOfUserResultOrBuilder {
+      // @@protoc_insertion_point(message_implements:DeleteAllShortsResult)
+      DeleteAllShortsResultOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use RemoveLikesOfUserResult.newBuilder() to construct.
-    private RemoveLikesOfUserResult(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use DeleteAllShortsResult.newBuilder() to construct.
+    private DeleteAllShortsResult(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private RemoveLikesOfUserResult() {
-      userId_ = "";
+    private DeleteAllShortsResult() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new RemoveLikesOfUserResult();
+      return new DeleteAllShortsResult();
     }
 
     @java.lang.Override
@@ -13477,7 +13614,7 @@ public final class ShortsProtoBuf {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private RemoveLikesOfUserResult(
+    private DeleteAllShortsResult(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -13495,12 +13632,6 @@ public final class ShortsProtoBuf {
             case 0:
               done = true;
               break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              userId_ = s;
-              break;
-            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -13524,53 +13655,15 @@ public final class ShortsProtoBuf {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return tukano.impl.grpc.generated_java.ShortsProtoBuf.internal_static_RemoveLikesOfUserResult_descriptor;
+      return tukano.impl.grpc.generated_java.ShortsProtoBuf.internal_static_DeleteAllShortsResult_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return tukano.impl.grpc.generated_java.ShortsProtoBuf.internal_static_RemoveLikesOfUserResult_fieldAccessorTable
+      return tukano.impl.grpc.generated_java.ShortsProtoBuf.internal_static_DeleteAllShortsResult_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult.class, tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult.Builder.class);
-    }
-
-    public static final int USERID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object userId_;
-    /**
-     * <code>string userId = 1;</code>
-     * @return The userId.
-     */
-    @java.lang.Override
-    public java.lang.String getUserId() {
-      java.lang.Object ref = userId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        userId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string userId = 1;</code>
-     * @return The bytes for userId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getUserIdBytes() {
-      java.lang.Object ref = userId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        userId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+              tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult.class, tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -13587,9 +13680,6 @@ public final class ShortsProtoBuf {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, userId_);
-      }
       unknownFields.writeTo(output);
     }
 
@@ -13599,9 +13689,6 @@ public final class ShortsProtoBuf {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, userId_);
-      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -13612,13 +13699,11 @@ public final class ShortsProtoBuf {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult)) {
+      if (!(obj instanceof tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult)) {
         return super.equals(obj);
       }
-      tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult other = (tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult) obj;
+      tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult other = (tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult) obj;
 
-      if (!getUserId()
-          .equals(other.getUserId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -13630,76 +13715,74 @@ public final class ShortsProtoBuf {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + USERID_FIELD_NUMBER;
-      hash = (53 * hash) + getUserId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult parseFrom(
+    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult parseFrom(
+    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult parseFrom(
+    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult parseFrom(
+    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult parseFrom(byte[] data)
+    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult parseFrom(
+    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult parseFrom(java.io.InputStream input)
+    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult parseFrom(
+    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult parseDelimitedFrom(java.io.InputStream input)
+    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult parseDelimitedFrom(
+    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult parseFrom(
+    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult parseFrom(
+    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -13712,7 +13795,7 @@ public final class ShortsProtoBuf {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult prototype) {
+    public static Builder newBuilder(tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -13728,26 +13811,26 @@ public final class ShortsProtoBuf {
       return builder;
     }
     /**
-     * Protobuf type {@code RemoveLikesOfUserResult}
+     * Protobuf type {@code DeleteAllShortsResult}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:RemoveLikesOfUserResult)
-        tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResultOrBuilder {
+        // @@protoc_insertion_point(builder_implements:DeleteAllShortsResult)
+        tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResultOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return tukano.impl.grpc.generated_java.ShortsProtoBuf.internal_static_RemoveLikesOfUserResult_descriptor;
+        return tukano.impl.grpc.generated_java.ShortsProtoBuf.internal_static_DeleteAllShortsResult_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return tukano.impl.grpc.generated_java.ShortsProtoBuf.internal_static_RemoveLikesOfUserResult_fieldAccessorTable
+        return tukano.impl.grpc.generated_java.ShortsProtoBuf.internal_static_DeleteAllShortsResult_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult.class, tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult.Builder.class);
+                tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult.class, tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult.Builder.class);
       }
 
-      // Construct using tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult.newBuilder()
+      // Construct using tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -13765,25 +13848,23 @@ public final class ShortsProtoBuf {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        userId_ = "";
-
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return tukano.impl.grpc.generated_java.ShortsProtoBuf.internal_static_RemoveLikesOfUserResult_descriptor;
+        return tukano.impl.grpc.generated_java.ShortsProtoBuf.internal_static_DeleteAllShortsResult_descriptor;
       }
 
       @java.lang.Override
-      public tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult getDefaultInstanceForType() {
-        return tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult.getDefaultInstance();
+      public tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult getDefaultInstanceForType() {
+        return tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult.getDefaultInstance();
       }
 
       @java.lang.Override
-      public tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult build() {
-        tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult result = buildPartial();
+      public tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult build() {
+        tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -13791,9 +13872,8 @@ public final class ShortsProtoBuf {
       }
 
       @java.lang.Override
-      public tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult buildPartial() {
-        tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult result = new tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult(this);
-        result.userId_ = userId_;
+      public tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult buildPartial() {
+        tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult result = new tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult(this);
         onBuilt();
         return result;
       }
@@ -13832,20 +13912,16 @@ public final class ShortsProtoBuf {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult) {
-          return mergeFrom((tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult)other);
+        if (other instanceof tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult) {
+          return mergeFrom((tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult other) {
-        if (other == tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult.getDefaultInstance()) return this;
-        if (!other.getUserId().isEmpty()) {
-          userId_ = other.userId_;
-          onChanged();
-        }
+      public Builder mergeFrom(tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult other) {
+        if (other == tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -13861,93 +13937,17 @@ public final class ShortsProtoBuf {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult parsedMessage = null;
+        tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult) e.getUnfinishedMessage();
+          parsedMessage = (tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
           }
         }
-        return this;
-      }
-
-      private java.lang.Object userId_ = "";
-      /**
-       * <code>string userId = 1;</code>
-       * @return The userId.
-       */
-      public java.lang.String getUserId() {
-        java.lang.Object ref = userId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          userId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string userId = 1;</code>
-       * @return The bytes for userId.
-       */
-      public com.google.protobuf.ByteString
-          getUserIdBytes() {
-        java.lang.Object ref = userId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          userId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string userId = 1;</code>
-       * @param value The userId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUserId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        userId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string userId = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUserId() {
-        
-        userId_ = getDefaultInstance().getUserId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string userId = 1;</code>
-       * @param value The bytes for userId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUserIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        userId_ = value;
-        onChanged();
         return this;
       }
       @java.lang.Override
@@ -13963,41 +13963,41 @@ public final class ShortsProtoBuf {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:RemoveLikesOfUserResult)
+      // @@protoc_insertion_point(builder_scope:DeleteAllShortsResult)
     }
 
-    // @@protoc_insertion_point(class_scope:RemoveLikesOfUserResult)
-    private static final tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:DeleteAllShortsResult)
+    private static final tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult();
+      DEFAULT_INSTANCE = new tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult();
     }
 
-    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult getDefaultInstance() {
+    public static tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<RemoveLikesOfUserResult>
-        PARSER = new com.google.protobuf.AbstractParser<RemoveLikesOfUserResult>() {
+    private static final com.google.protobuf.Parser<DeleteAllShortsResult>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteAllShortsResult>() {
       @java.lang.Override
-      public RemoveLikesOfUserResult parsePartialFrom(
+      public DeleteAllShortsResult parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new RemoveLikesOfUserResult(input, extensionRegistry);
+        return new DeleteAllShortsResult(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<RemoveLikesOfUserResult> parser() {
+    public static com.google.protobuf.Parser<DeleteAllShortsResult> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<RemoveLikesOfUserResult> getParserForType() {
+    public com.google.protobuf.Parser<DeleteAllShortsResult> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult getDefaultInstanceForType() {
+    public tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -14099,15 +14099,15 @@ public final class ShortsProtoBuf {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_GetFeedResult_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_RemoveLikesOfUserArgs_descriptor;
+    internal_static_DeleteAllShortsArgs_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_RemoveLikesOfUserArgs_fieldAccessorTable;
+      internal_static_DeleteAllShortsArgs_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_RemoveLikesOfUserResult_descriptor;
+    internal_static_DeleteAllShortsResult_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_RemoveLikesOfUserResult_fieldAccessorTable;
+      internal_static_DeleteAllShortsResult_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -14139,23 +14139,23 @@ public final class ShortsProtoBuf {
       "shortId\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\"\035\n\013Likes" +
       "Result\022\016\n\006userId\030\001 \003(\t\"/\n\013GetFeedArgs\022\016\n" +
       "\006userId\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\" \n\rGetFe" +
-      "edResult\022\017\n\007shortId\030\001 \003(\t\"9\n\025RemoveLikes" +
-      "OfUserArgs\022\016\n\006userId\030\001 \001(\t\022\020\n\010password\030\002" +
-      " \001(\t\")\n\027RemoveLikesOfUserResult\022\016\n\006userI" +
-      "d\030\001 \001(\t2\325\003\n\006Shorts\0223\n\013createShort\022\020.Crea" +
-      "teShortArgs\032\022.CreateShortResult\0223\n\013delet" +
-      "eShort\022\020.DeleteShortArgs\032\022.DeleteShortRe" +
-      "sult\022*\n\010getShort\022\r.GetShortArgs\032\017.GetSho" +
-      "rtResult\022-\n\tgetShorts\022\016.GetShortsArgs\032\020." +
-      "GetShortsResult\022$\n\006follow\022\013.FollowArgs\032\r" +
-      ".FollowResult\022-\n\tfollowers\022\016.FollowersAr" +
-      "gs\032\020.FollowersResult\022\036\n\004like\022\t.LikeArgs\032" +
-      "\013.LikeResult\022!\n\005likes\022\n.LikesArgs\032\014.Like" +
-      "sResult\022\'\n\007getFeed\022\014.GetFeedArgs\032\016.GetFe" +
-      "edResult\022E\n\021removeLikesOfUser\022\026.RemoveLi" +
-      "kesOfUserArgs\032\030.RemoveLikesOfUserResultB" +
-      "1\n\037tukano.impl.grpc.generated_javaB\016Shor" +
-      "tsProtoBufb\006proto3"
+      "edResult\022\017\n\007shortId\030\001 \003(\t\"F\n\023DeleteAllSh" +
+      "ortsArgs\022\016\n\006userId\030\001 \001(\t\022\020\n\010password\030\002 \001" +
+      "(\t\022\r\n\005token\030\003 \001(\t\"\027\n\025DeleteAllShortsResu" +
+      "lt2\317\003\n\006Shorts\0223\n\013createShort\022\020.CreateSho" +
+      "rtArgs\032\022.CreateShortResult\0223\n\013deleteShor" +
+      "t\022\020.DeleteShortArgs\032\022.DeleteShortResult\022" +
+      "*\n\010getShort\022\r.GetShortArgs\032\017.GetShortRes" +
+      "ult\022-\n\tgetShorts\022\016.GetShortsArgs\032\020.GetSh" +
+      "ortsResult\022$\n\006follow\022\013.FollowArgs\032\r.Foll" +
+      "owResult\022-\n\tfollowers\022\016.FollowersArgs\032\020." +
+      "FollowersResult\022\036\n\004like\022\t.LikeArgs\032\013.Lik" +
+      "eResult\022!\n\005likes\022\n.LikesArgs\032\014.LikesResu" +
+      "lt\022\'\n\007getFeed\022\014.GetFeedArgs\032\016.GetFeedRes" +
+      "ult\022?\n\017deleteAllShorts\022\024.DeleteAllShorts" +
+      "Args\032\026.DeleteAllShortsResultB1\n\037tukano.i" +
+      "mpl.grpc.generated_javaB\016ShortsProtoBufb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14275,18 +14275,18 @@ public final class ShortsProtoBuf {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_GetFeedResult_descriptor,
         new java.lang.String[] { "ShortId", });
-    internal_static_RemoveLikesOfUserArgs_descriptor =
+    internal_static_DeleteAllShortsArgs_descriptor =
       getDescriptor().getMessageTypes().get(19);
-    internal_static_RemoveLikesOfUserArgs_fieldAccessorTable = new
+    internal_static_DeleteAllShortsArgs_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_RemoveLikesOfUserArgs_descriptor,
-        new java.lang.String[] { "UserId", "Password", });
-    internal_static_RemoveLikesOfUserResult_descriptor =
+        internal_static_DeleteAllShortsArgs_descriptor,
+        new java.lang.String[] { "UserId", "Password", "Token", });
+    internal_static_DeleteAllShortsResult_descriptor =
       getDescriptor().getMessageTypes().get(20);
-    internal_static_RemoveLikesOfUserResult_fieldAccessorTable = new
+    internal_static_DeleteAllShortsResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_RemoveLikesOfUserResult_descriptor,
-        new java.lang.String[] { "UserId", });
+        internal_static_DeleteAllShortsResult_descriptor,
+        new java.lang.String[] { });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
