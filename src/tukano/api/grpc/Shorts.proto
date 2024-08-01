@@ -23,8 +23,8 @@ service Shorts {
 	rpc likes( LikesArgs ) returns (LikesResult);
 
 	rpc getFeed( GetFeedArgs) returns (GetFeedResult);
-	
-	rpc removeLikesOfUser( RemoveLikesOfUserArgs) returns (RemoveLikesOfUserResult);
+
+	rpc deleteAllShorts( DeleteAllShortsArgs ) returns (DeleteAllShortsResult);
 
 }
 
@@ -116,11 +116,11 @@ message GetFeedResult {
 	repeated string shortId = 1;
 }
 
-message RemoveLikesOfUserArgs {
+message DeleteAllShortsArgs {
 	string userId = 1;
 	string password = 2;
+	string token = 3;
 }
 
-message RemoveLikesOfUserResult {
-	string userId = 1;
+message DeleteAllShortsResult {
 }

@@ -77,6 +77,68 @@ public final class BlobsGrpc {
     return getDownloadMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteArgs,
+      tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteResult> getDeleteMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "delete",
+      requestType = tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteArgs.class,
+      responseType = tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteResult.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteArgs,
+      tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteResult> getDeleteMethod() {
+    io.grpc.MethodDescriptor<tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteArgs, tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteResult> getDeleteMethod;
+    if ((getDeleteMethod = BlobsGrpc.getDeleteMethod) == null) {
+      synchronized (BlobsGrpc.class) {
+        if ((getDeleteMethod = BlobsGrpc.getDeleteMethod) == null) {
+          BlobsGrpc.getDeleteMethod = getDeleteMethod =
+              io.grpc.MethodDescriptor.<tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteArgs, tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteResult>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "delete"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteArgs.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteResult.getDefaultInstance()))
+              .setSchemaDescriptor(new BlobsMethodDescriptorSupplier("delete"))
+              .build();
+        }
+      }
+    }
+    return getDeleteMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteAllBlobsArgs,
+      tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteAllBlobsResult> getDeleteAllBlobsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "deleteAllBlobs",
+      requestType = tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteAllBlobsArgs.class,
+      responseType = tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteAllBlobsResult.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteAllBlobsArgs,
+      tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteAllBlobsResult> getDeleteAllBlobsMethod() {
+    io.grpc.MethodDescriptor<tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteAllBlobsArgs, tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteAllBlobsResult> getDeleteAllBlobsMethod;
+    if ((getDeleteAllBlobsMethod = BlobsGrpc.getDeleteAllBlobsMethod) == null) {
+      synchronized (BlobsGrpc.class) {
+        if ((getDeleteAllBlobsMethod = BlobsGrpc.getDeleteAllBlobsMethod) == null) {
+          BlobsGrpc.getDeleteAllBlobsMethod = getDeleteAllBlobsMethod =
+              io.grpc.MethodDescriptor.<tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteAllBlobsArgs, tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteAllBlobsResult>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deleteAllBlobs"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteAllBlobsArgs.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteAllBlobsResult.getDefaultInstance()))
+              .setSchemaDescriptor(new BlobsMethodDescriptorSupplier("deleteAllBlobs"))
+              .build();
+        }
+      }
+    }
+    return getDeleteAllBlobsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -138,6 +200,20 @@ public final class BlobsGrpc {
         io.grpc.stub.StreamObserver<tukano.impl.grpc.generated_java.BlobsProtoBuf.DownloadResult> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDownloadMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void delete(tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteArgs request,
+        io.grpc.stub.StreamObserver<tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteResult> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void deleteAllBlobs(tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteAllBlobsArgs request,
+        io.grpc.stub.StreamObserver<tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteAllBlobsResult> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteAllBlobsMethod(), responseObserver);
+    }
   }
 
   /**
@@ -182,6 +258,22 @@ public final class BlobsGrpc {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getDownloadMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void delete(tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteArgs request,
+        io.grpc.stub.StreamObserver<tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteResult> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void deleteAllBlobs(tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteAllBlobsArgs request,
+        io.grpc.stub.StreamObserver<tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteAllBlobsResult> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteAllBlobsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -214,6 +306,20 @@ public final class BlobsGrpc {
       return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getDownloadMethod(), getCallOptions(), request);
     }
+
+    /**
+     */
+    public tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteResult delete(tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteArgs request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteAllBlobsResult deleteAllBlobs(tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteAllBlobsArgs request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteAllBlobsMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -239,10 +345,28 @@ public final class BlobsGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUploadMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteResult> delete(
+        tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteArgs request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteAllBlobsResult> deleteAllBlobs(
+        tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteAllBlobsArgs request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteAllBlobsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_UPLOAD = 0;
   private static final int METHODID_DOWNLOAD = 1;
+  private static final int METHODID_DELETE = 2;
+  private static final int METHODID_DELETE_ALL_BLOBS = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -268,6 +392,14 @@ public final class BlobsGrpc {
         case METHODID_DOWNLOAD:
           serviceImpl.download((tukano.impl.grpc.generated_java.BlobsProtoBuf.DownloadArgs) request,
               (io.grpc.stub.StreamObserver<tukano.impl.grpc.generated_java.BlobsProtoBuf.DownloadResult>) responseObserver);
+          break;
+        case METHODID_DELETE:
+          serviceImpl.delete((tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteArgs) request,
+              (io.grpc.stub.StreamObserver<tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteResult>) responseObserver);
+          break;
+        case METHODID_DELETE_ALL_BLOBS:
+          serviceImpl.deleteAllBlobs((tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteAllBlobsArgs) request,
+              (io.grpc.stub.StreamObserver<tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteAllBlobsResult>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -301,6 +433,20 @@ public final class BlobsGrpc {
               tukano.impl.grpc.generated_java.BlobsProtoBuf.DownloadArgs,
               tukano.impl.grpc.generated_java.BlobsProtoBuf.DownloadResult>(
                 service, METHODID_DOWNLOAD)))
+        .addMethod(
+          getDeleteMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteArgs,
+              tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteResult>(
+                service, METHODID_DELETE)))
+        .addMethod(
+          getDeleteAllBlobsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteAllBlobsArgs,
+              tukano.impl.grpc.generated_java.BlobsProtoBuf.DeleteAllBlobsResult>(
+                service, METHODID_DELETE_ALL_BLOBS)))
         .build();
   }
 
@@ -351,6 +497,8 @@ public final class BlobsGrpc {
               .setSchemaDescriptor(new BlobsFileDescriptorSupplier())
               .addMethod(getUploadMethod())
               .addMethod(getDownloadMethod())
+              .addMethod(getDeleteMethod())
+              .addMethod(getDeleteAllBlobsMethod())
               .build();
         }
       }

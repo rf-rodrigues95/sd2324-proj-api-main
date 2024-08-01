@@ -17,7 +17,6 @@ public class Short {
 	
 	@Id
 	String shortId;
-	@Id
 	String ownerId;
 	String blobUrl;
 	long timestamp;
@@ -77,7 +76,6 @@ public class Short {
 	public void setTotalLikes(int totalLikes) {
 		this.totalLikes = totalLikes;
 	}
-	
 
 	@Override
 	public String toString() {

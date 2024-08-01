@@ -4,7 +4,6 @@ package tukano.api.java;
 import java.util.List;
 
 import tukano.api.Short;
-import tukano.api.User;
 
 /**
  * 
@@ -45,11 +44,10 @@ public interface Shorts {
 	Result<Void> deleteShort(String shortId, String password);
 	
 	
-	//Result<Void> deleteSomething(String shortId, String password, String userId);
 	/**
 	 * Retrieves a given Short.
 	 * 
-	 * @param shortId the unique identifier of the short to be retrieved
+	 * @param shortId the unique identifier of the short to be deleted
 	 * @return (OK,Short), 
 	 * 	NOT_FOUND if shortId does not match an existing short
 	 */
@@ -57,7 +55,7 @@ public interface Shorts {
 	
 	
 	/**
-	 * Retrieves the list of identifiers of the shorts created by the given user.
+	 * Retrieves the list of identifiers of the shorts created by the given user, with its total likes count updated.
 	 * 
 	 * @param userId the user that owns the requested shorts
 	 * @return (OK, List<String>|empty list) or NOT_FOUND if the user does not exist
@@ -80,7 +78,7 @@ public interface Shorts {
 	Result<Void> follow(String userId1, String userId2, boolean isFollowing, String password);	
 
 	/**
-	 * Retrieves the list of users following a given user
+	 * Retrieves the lost of users following a given user
 	 * @param userId - the followed user
 	 * @param password - the password of the followed user
 	 * @return (OK, List<String>|empty list) the list of users that follow another user, or empty if the user has no followers 
@@ -102,16 +100,13 @@ public interface Shorts {
 	 */
 	Result<Void> like(String shortId, String userId, boolean isLiked, String password);
 	
-	
-	
-	//Result<Void> removeLikesOfUser(String userId, String password);
 
 	/**
 	 * Returns all the likes of a given short
 	 * 
 	 * @param shortId the identifier of the short
 	 * @param password the password of the owner of the short
-	 * @return (OK,List<String>|empty list), 
+	 * @return (OK,Boolean), 
 	 * NOT_FOUND if there is no Short with the given shortId
 	 * FORBIDDEN if the password is incorrect
 	 */
@@ -124,13 +119,9 @@ public interface Shorts {
 	 * 
 	 * @param userId user of the requested feed
 	 * @param password the password of the user
-	 * @return (OK,List<String>|empty list)
+	 * @return (OK,List<PostId>|empty list)
 	 * 	NOT_FOUND if the user does not exists
 	 *  FORBIDDEN if the password is incorrect
 	 */
 	Result<List<String>> getFeed(String userId, String password);
-
-	
-	Result<String> removeLikesOfUser(String userId, String password);
-
 }

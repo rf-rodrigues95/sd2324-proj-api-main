@@ -12,7 +12,6 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.QueryParam;
 import jakarta.ws.rs.core.MediaType;
 import tukano.api.Short;
-import tukano.api.User;
 
 @Path(RestShorts.PATH)
 public interface RestShorts {
@@ -39,10 +38,6 @@ public interface RestShorts {
 	@Path("/{" + SHORT_ID + "}")
 	void deleteShort(@PathParam(SHORT_ID) String shortId, @QueryParam(PWD) String password);
 
-	//@DELETE
-	//@Path("/{" + SHORT_ID + "}")
-	//void deleteSomething(@PathParam(SHORT_ID) String shortId, @QueryParam(PWD) String password, @QueryParam(USER_ID) String userId);
-	
 	@GET
 	@Path("/{" + SHORT_ID + "}" )
 	@Produces(MediaType.APPLICATION_JSON)
@@ -72,14 +67,7 @@ public interface RestShorts {
 	@Path("/{" + SHORT_ID + "}" + LIKES )
 	@Produces(MediaType.APPLICATION_JSON)
 	List<String> likes(@PathParam(SHORT_ID) String shortId, @QueryParam(PWD) String password);
-	
-	
-	@DELETE
-	@Path("/{" + USER_ID + "}" + LIKES )
-	@Produces(MediaType.APPLICATION_JSON)
-	String removeLikesOfUser(@PathParam(USER_ID) String userId, @QueryParam(PWD) String password);
-	
-	
+
 	@GET
 	@Path("/{" + USER_ID + "}" + FEED )
 	@Produces(MediaType.APPLICATION_JSON)

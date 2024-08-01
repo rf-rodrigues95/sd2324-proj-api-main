@@ -294,35 +294,35 @@ public final class ShortsGrpc {
     return getGetFeedMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs,
-      tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult> getRemoveLikesOfUserMethod;
+  private static volatile io.grpc.MethodDescriptor<tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs,
+      tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult> getDeleteAllShortsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "removeLikesOfUser",
-      requestType = tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs.class,
-      responseType = tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult.class,
+      fullMethodName = SERVICE_NAME + '/' + "deleteAllShorts",
+      requestType = tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs.class,
+      responseType = tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs,
-      tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult> getRemoveLikesOfUserMethod() {
-    io.grpc.MethodDescriptor<tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs, tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult> getRemoveLikesOfUserMethod;
-    if ((getRemoveLikesOfUserMethod = ShortsGrpc.getRemoveLikesOfUserMethod) == null) {
+  public static io.grpc.MethodDescriptor<tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs,
+      tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult> getDeleteAllShortsMethod() {
+    io.grpc.MethodDescriptor<tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs, tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult> getDeleteAllShortsMethod;
+    if ((getDeleteAllShortsMethod = ShortsGrpc.getDeleteAllShortsMethod) == null) {
       synchronized (ShortsGrpc.class) {
-        if ((getRemoveLikesOfUserMethod = ShortsGrpc.getRemoveLikesOfUserMethod) == null) {
-          ShortsGrpc.getRemoveLikesOfUserMethod = getRemoveLikesOfUserMethod =
-              io.grpc.MethodDescriptor.<tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs, tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult>newBuilder()
+        if ((getDeleteAllShortsMethod = ShortsGrpc.getDeleteAllShortsMethod) == null) {
+          ShortsGrpc.getDeleteAllShortsMethod = getDeleteAllShortsMethod =
+              io.grpc.MethodDescriptor.<tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs, tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "removeLikesOfUser"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deleteAllShorts"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs.getDefaultInstance()))
+                  tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult.getDefaultInstance()))
-              .setSchemaDescriptor(new ShortsMethodDescriptorSupplier("removeLikesOfUser"))
+                  tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult.getDefaultInstance()))
+              .setSchemaDescriptor(new ShortsMethodDescriptorSupplier("deleteAllShorts"))
               .build();
         }
       }
     }
-    return getRemoveLikesOfUserMethod;
+    return getDeleteAllShortsMethod;
   }
 
   /**
@@ -438,9 +438,9 @@ public final class ShortsGrpc {
 
     /**
      */
-    default void removeLikesOfUser(tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs request,
-        io.grpc.stub.StreamObserver<tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveLikesOfUserMethod(), responseObserver);
+    default void deleteAllShorts(tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs request,
+        io.grpc.stub.StreamObserver<tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteAllShortsMethod(), responseObserver);
     }
   }
 
@@ -545,10 +545,10 @@ public final class ShortsGrpc {
 
     /**
      */
-    public void removeLikesOfUser(tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs request,
-        io.grpc.stub.StreamObserver<tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult> responseObserver) {
+    public void deleteAllShorts(tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs request,
+        io.grpc.stub.StreamObserver<tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getRemoveLikesOfUserMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getDeleteAllShortsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -633,9 +633,9 @@ public final class ShortsGrpc {
 
     /**
      */
-    public tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult removeLikesOfUser(tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs request) {
+    public tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult deleteAllShorts(tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getRemoveLikesOfUserMethod(), getCallOptions(), request);
+          getChannel(), getDeleteAllShortsMethod(), getCallOptions(), request);
     }
   }
 
@@ -729,10 +729,10 @@ public final class ShortsGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult> removeLikesOfUser(
-        tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs request) {
+    public com.google.common.util.concurrent.ListenableFuture<tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult> deleteAllShorts(
+        tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getRemoveLikesOfUserMethod(), getCallOptions()), request);
+          getChannel().newCall(getDeleteAllShortsMethod(), getCallOptions()), request);
     }
   }
 
@@ -745,7 +745,7 @@ public final class ShortsGrpc {
   private static final int METHODID_LIKE = 6;
   private static final int METHODID_LIKES = 7;
   private static final int METHODID_GET_FEED = 8;
-  private static final int METHODID_REMOVE_LIKES_OF_USER = 9;
+  private static final int METHODID_DELETE_ALL_SHORTS = 9;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -800,9 +800,9 @@ public final class ShortsGrpc {
           serviceImpl.getFeed((tukano.impl.grpc.generated_java.ShortsProtoBuf.GetFeedArgs) request,
               (io.grpc.stub.StreamObserver<tukano.impl.grpc.generated_java.ShortsProtoBuf.GetFeedResult>) responseObserver);
           break;
-        case METHODID_REMOVE_LIKES_OF_USER:
-          serviceImpl.removeLikesOfUser((tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs) request,
-              (io.grpc.stub.StreamObserver<tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult>) responseObserver);
+        case METHODID_DELETE_ALL_SHORTS:
+          serviceImpl.deleteAllShorts((tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs) request,
+              (io.grpc.stub.StreamObserver<tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -886,12 +886,12 @@ public final class ShortsGrpc {
               tukano.impl.grpc.generated_java.ShortsProtoBuf.GetFeedResult>(
                 service, METHODID_GET_FEED)))
         .addMethod(
-          getRemoveLikesOfUserMethod(),
+          getDeleteAllShortsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserArgs,
-              tukano.impl.grpc.generated_java.ShortsProtoBuf.RemoveLikesOfUserResult>(
-                service, METHODID_REMOVE_LIKES_OF_USER)))
+              tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsArgs,
+              tukano.impl.grpc.generated_java.ShortsProtoBuf.DeleteAllShortsResult>(
+                service, METHODID_DELETE_ALL_SHORTS)))
         .build();
   }
 
@@ -949,7 +949,7 @@ public final class ShortsGrpc {
               .addMethod(getLikeMethod())
               .addMethod(getLikesMethod())
               .addMethod(getGetFeedMethod())
-              .addMethod(getRemoveLikesOfUserMethod())
+              .addMethod(getDeleteAllShortsMethod())
               .build();
         }
       }
